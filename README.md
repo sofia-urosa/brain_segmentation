@@ -45,7 +45,7 @@ Install requirements from requirements.txt
 
 <br>Before running the project you will have to access the "data" folder and add the images and masks in "test" and "train" folders. A discussion about splitting methods is outside of the scope of this README, but you can try whatever you think is best. There are no strict rules on how to do this, but a good starting point can be using the 80/20 rule.
 
-You can find files to help you with the splitting inside of ``data/split``. </br>
+You can find files to help you with the splitting inside ``data/split``. </br>
 
 <br>Finally you're ready to train:</br>
 
