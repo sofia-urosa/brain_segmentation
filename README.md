@@ -30,7 +30,7 @@ In our tests, U-Net showed the best overall performance. Thus, it was used to tr
 Clone the source code, cd into your desired location
 
 ```python
-(env_name)$ git clone GIT
+(env_name)$ git clone https://github.com/sofia-urosa/brain_segmentation.git
 (env_name)$ cd brain_segmentation
 (env_name)$ git checkout tf2
 ```
