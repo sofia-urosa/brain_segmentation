@@ -6,8 +6,15 @@ It's updated so it works with TensorFlow2.
 
 Some of the tested architectures are:
 
-Unet
+- **Unet**
+- Unet + Grid Attention Gate
+- Unet + Filter Attention Gate
+- UNet + Regularization
+- Unet + Grid Attention Gate + Regularization
+- Mask RCNN
+- FCN vgg19 backbone
 
+In our tests, U-Net showed the best overall performance. Thus, it was used to train our model. You can find the GitHub repo for it [here](https://github.com/sofia-urosa/brain-masking.git).
 
 ## Requirements</b>
 - tqdm
@@ -36,13 +43,23 @@ Install requirements from requirements.txt
 
 ### Running the project
 
-<br>Before running the project you will have to access the "data" folder and add the images and masks in the "test" and "train" folders. It's recommended to divide the total amount of images in 80% train, 20% test.</br>
-<br>Finally you're ready to execute the project:</br>
+<br>Before running the project you will have to access the "data" folder and add the images and masks in "test" and "train" folders. A discussion about splitting methods is outside of the scope of this README, but you can try whatever you think is best. There are no strict rules on how to do this, but a good starting point can be using the 80/20 rule.
+
+You can find files to help you with the splitting inside of ``data/split``. </br>
+
+<br>Finally you're ready to train:</br>
 
 ```python
 python train.py --exp name_of_the_training
 ```
-<br>If you don't chose a name_of_the_training or you pick an existing one the tool will show an error message</br>
+
+or using k-fold cross-validation:
+
+```python
+python kfold.py --exp name_of_the_training
+```
+
+<br>If you don't chose a name_of_the_training or you pick an existing one the tool will show an error message.</br>
 <br>You will have to activate the environment every time you want to run the tool.</br>
 
 ## Setup
